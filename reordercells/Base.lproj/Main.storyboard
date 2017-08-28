@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XsV-gW-HdY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rearrangingcells-->
+        <scene sceneID="8UO-Dp-ujT">
+            <objects>
+                <viewController storyboardIdentifier="Rearrangingcells" id="XsV-gW-HdY" customClass="Rearrangingcells" customModule="reordercells" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kjw-I0-IFJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lLY-st-bLY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0pa-CY-32W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R7s-T7-qlf" customClass="Customcell">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Customcell" rowHeight="84" id="vAC-ik-0fq" customClass="Customcell" customModule="reordercells" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vAC-ik-0fq" id="ff5-cz-hvz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgf-xt-EOK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2rz-lY-wlK"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Numbers" id="dlL-dq-Fen">
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="ELc-VF-3Xj">
+                                            <connections>
+                                                <action selector="editBtn:" destination="XsV-gW-HdY" id="QlZ-gX-yKH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lLY-st-bLY" firstAttribute="top" secondItem="R7s-T7-qlf" secondAttribute="bottom" id="GRi-8V-wYI"/>
+                            <constraint firstItem="R7s-T7-qlf" firstAttribute="trailing" secondItem="0pa-CY-32W" secondAttribute="trailing" id="Low-aE-jR3"/>
+                            <constraint firstItem="R7s-T7-qlf" firstAttribute="top" secondItem="Kjw-I0-IFJ" secondAttribute="bottom" constant="20" id="MSo-sI-UHM"/>
+                            <constraint firstItem="Fgf-xt-EOK" firstAttribute="leading" secondItem="0pa-CY-32W" secondAttribute="leading" id="NE4-Ql-cqG"/>
+                            <constraint firstItem="R7s-T7-qlf" firstAttribute="leading" secondItem="0pa-CY-32W" secondAttribute="leading" id="WwE-M5-Ueh"/>
+                            <constraint firstAttribute="trailing" secondItem="Fgf-xt-EOK" secondAttribute="trailing" id="tT6-5k-nAv"/>
+                            <constraint firstItem="Fgf-xt-EOK" firstAttribute="top" secondItem="0pa-CY-32W" secondAttribute="top" id="vZw-5p-HIL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="editButton" destination="ELc-VF-3Xj" id="U2R-g4-GbB"/>
+                        <outlet property="mytableview" destination="R7s-T7-qlf" id="1SH-vM-C2Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXG-7m-ski" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
